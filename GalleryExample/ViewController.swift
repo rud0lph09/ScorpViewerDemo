@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import ScorpViewer
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  @IBAction func showPhotos(){
+    let imagesArray: [UIImage] = [UIImage(named: "one")!,
+                                  UIImage(named: "two")!,
+                                  UIImage(named: "three")!,
+                                  UIImage(named: "four")!,
+                                  UIImage(named: "five")!, ]
+    guard let fotoViewer = ScorpViewerViewController.instantiate(withPhotos: imagesArray) else { return }
+    self.present(fotoViewer, animated: true, completion: nil)
   }
 
-
 }
-

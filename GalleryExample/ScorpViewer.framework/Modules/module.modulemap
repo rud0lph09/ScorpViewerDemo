@@ -1,0 +1,4 @@
+framework module ScorpViewer {
+  header "ScorpViewer-Swift.h"
+  requires objc
+}
